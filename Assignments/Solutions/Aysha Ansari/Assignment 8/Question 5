@@ -1,0 +1,15 @@
+class Solution {
+  public:
+    string triDownwards(string S) {
+        string ans="";
+        for(int i=0;i<S.size();i++){
+            int j;
+            for(j=0;j<i;j++)
+                ans=ans+'.';
+            
+            for(int k=j;k<S.size();k++)
+                ans=ans+S[k];
+        }
+        return ans;
+    }
+};
