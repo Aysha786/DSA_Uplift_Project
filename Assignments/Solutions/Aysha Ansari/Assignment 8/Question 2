@@ -1,0 +1,21 @@
+class Solution{
+public:
+	int countZeros(vector<vector<int>>A)
+	{
+		int cz=0;
+		int i=0;
+		int n=A.size()-1;
+		int j=n;
+		while(i<=n&&j>=0){
+		    if(A[i][j]==1){
+		        j--;
+		    }
+		    else {
+		        cz+=(j+1);
+		        i++;
+		    }
+		}
+		return cz;
+	}
+	
+};
